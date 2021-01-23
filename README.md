@@ -1,3 +1,1 @@
-## damenor Curriculum Vitae
-
-[Visit the web!!](https://damenor-cv.netlify.app/){:target="_blank"}
+%md <a href="https://damenor-cv.netlify.app/" target="_blank">Visit my resume!</a>
