@@ -5,8 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:netlify": "ng build --output-path=dist/",
-    "build:gitpages": "ng build --base-href=/damenor-cv/",
+    "build:netlify": "ng build --output-path=dist/ --prod",
+    "build:gitpages": "ng build --base-href=/damenor-cv/ --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
