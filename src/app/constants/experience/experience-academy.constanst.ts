@@ -3,12 +3,12 @@ export const EXPERIENCIES_ACADEMY = {
   items: [
     { 
       date: 'Sept 2004 - Abril 2006', 
-      title: 'FP Medio Administración', 
+      title: 'FP Administración', 
       description: 'IES Pintor Rafael Requena - Caudete (Albacete)' 
     },
     { 
       date: 'Sept 2007 - Junio 2009', 
-      title: 'FP Medio Administración y Finanzas', 
+      title: 'FP Administración y Finanzas', 
       description: 'IES Pintor Rafael Requena - Caudete (Albacete)' 
     },
     { 
