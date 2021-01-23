@@ -1,0 +1,12 @@
+@import 'imports';
+
+.socials {
+  @include flex($x: center);
+  @include card($padding: 0.25rem);
+  width: 100%;
+  a {
+    margin: 0 0.5rem;
+    color: $color-gray;
+    font-size: $font-size-xl;
+  }
+}

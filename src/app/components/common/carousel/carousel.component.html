@@ -1,0 +1,27 @@
+<div class="carousel" [ngClass]="{ 'carousel--reverse': topControls }">
+
+  <div class="carousel__content" #carousel>
+    <ng-container>
+      <div 
+        *ngFor="let item of items; let i = index"
+        [ngClass]="{'carousel__content-item--active': currentPosition === i}"
+        class="carousel__content-item">
+        <ng-container [ngTemplateOutlet]="item.tpl"></ng-container>
+      </div>
+    </ng-container>
+  </div>
+
+  <div *ngIf="showControls" class="carousel__buttons">
+    <fa-icon [icon]="faChevronLeft" (click)="prev()"></fa-icon>
+    <div class="carousel__buttons-steps">
+      <div 
+        *ngFor="let item of items; let i = index" 
+        [ngClass]="{ 'carousel__buttons-steps-item--active': currentPosition === i }"
+        class="carousel__buttons-steps-item" 
+        (click)="setCurrentPosition(i)">
+      </div>
+    </div>
+    <fa-icon [icon]="faChevronRight" (click)="next()"></fa-icon>
+  </div>
+
+</div>

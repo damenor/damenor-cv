@@ -1,0 +1,11 @@
+@mixin button-neumorphism {
+  color: $color-light;
+  text-align: center;
+  background: $color-bg-dark;
+  border-radius: 0.25rem;
+  // box-shadow: $darkUpperShadow, $darkLowerShadow;
+  cursor: pointer;
+  &:active {
+    // box-shadow: inset $darkUpperShadow, inset $darkLowerShadow;
+  }
+}

@@ -1,0 +1,17 @@
+@import 'imports';
+
+.tags {
+  @include flex($x: center);
+  max-width: 360px;
+  margin: 0 auto;
+  &__item {
+    margin: 0.25rem;
+    padding: 0.5rem;
+    color: $color-primary-contrast;
+    font-size: $font-size-s;
+    font-weight: $font-weight-xl;
+    letter-spacing: 1px;
+    background-color: $color-primary;
+    border-radius: 1rem;
+  }
+}

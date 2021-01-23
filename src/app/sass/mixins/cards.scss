@@ -1,0 +1,10 @@
+@mixin card ($width: 100%, $padding: 1rem, $margin: 0 0 0.5rem 0, $border-radius: 1rem, $isInset: false) {
+  $shadow: $shadow-dark;
+  @if ($isInset == true) {
+    $shadow: $shadow-dark-inset;
+  } 
+  width: $width;
+  margin: $margin;
+  padding: $padding;
+  background-color: $color-bg-dark-light;
+}

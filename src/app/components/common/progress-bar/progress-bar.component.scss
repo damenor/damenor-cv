@@ -1,0 +1,21 @@
+@import 'imports';
+
+.progress-bar {
+  width: 100%;
+  margin: 0.5rem 0;
+  background-color: $color-gray;
+  border-radius: 0.25rem;
+  &__value {
+    height: 100%;
+    background-color: $color-secondary;
+    border-radius: inherit;
+    &-text {
+      padding: 0.25rem 1rem;
+      color: $color-secondary-contrast;
+      font-size: $font-size-s;
+      font-weight: $font-weight-xl;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  }
+}

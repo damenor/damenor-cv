@@ -1,0 +1,12 @@
+@import 'imports';
+
+.btn-download-cv {
+  margin-top: 1rem;
+  color: $color-primary-contrast;
+  font-weight: $font-weight-xl;
+  text-transform: uppercase;
+  background-color: $color-primary;
+  &:active {
+    transform: scale(0.98);
+  }
+}

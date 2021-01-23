@@ -1,0 +1,16 @@
+@import 'imports';
+
+.card {
+  @include card;
+  overflow: hidden;
+  &__title {
+    font-weight: $font-weight-xl;
+    font-size: $font-size-m;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid $color-gray;
+    @include mediaQueryDesktop {
+      font-size: $font-size-l;
+    }
+  }
+}

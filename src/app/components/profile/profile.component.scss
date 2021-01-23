@@ -1,0 +1,44 @@
+@import 'imports';
+
+.profile {
+  @include flex($direction: column, $x: center);
+    
+  &__data {
+    
+    @include card;
+    @include flex($x: center, $y: center, $direction: column);
+    max-width: 100%;
+
+    &-img {
+      $size: 120px;
+      width: $size;
+      height: $size;
+      margin: 0 auto;
+      padding: 0.5rem;
+      border-radius: 50%;
+      background: $color-bg-dark;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+    }
+
+    &-name {
+      margin-top: 1rem;
+      font-size: $font-size-l;
+      text-align: center;
+    }
+    &-job {
+      color: $color-gray-light;
+      font-size: $font-size-xs;
+      text-align: center;
+    }
+    
+  }
+  
+  app-socials {
+    width: 100%;
+  }
+
+}

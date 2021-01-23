@@ -1,0 +1,12 @@
+<div class="timeline">
+  <div
+    *ngFor="let item of items; let i = index" 
+    class="timeline__item"
+    [ngClass]="{ 'timeline__item--left': isLeft(i), 'timeline__item--right': !isLeft(i) }">
+    <div class="timeline__item-data">
+      <p class="timeline__item-data-date">{{ item.date }}</p>
+      <p class="timeline__item-data-title">{{ item.title }}</p>
+    </div>
+    <div class="timeline__item-description">{{ item.description }}</div>
+  </div>
+</div>

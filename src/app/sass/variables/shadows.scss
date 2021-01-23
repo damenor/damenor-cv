@@ -1,0 +1,7 @@
+$shadow-dark-color: #262626;
+
+$shadow-dark: 3px 3px 4px$shadow-dark-color,
+             -3px -3px 4px$shadow-dark-color ; 
+
+$shadow-dark-inset: inset 3px 3px 4px $shadow-dark-color,
+                    inset -3px -3px 4px $shadow-dark-color; 

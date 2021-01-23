@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+@import './app/sass/imports';
+@import 'reset';
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+::-webkit-scrollbar {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $color-bg-dark-light; 
+}
+
+body {
+  color: $color-light;
+  background-color: $color-bg-dark;
+  font-family: 'Open Sans', sans-serif;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  color: inherit;
+  background-color: inherit;
+  border: none;
+}
