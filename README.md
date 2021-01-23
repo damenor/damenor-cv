@@ -1,3 +1,3 @@
-# DamenorCv
+## damenor Curriculum Vitae
 
-[Visit](https://damenor.github.io/damenor-cv/) 
+[Visit the web!!](https://damenor-cv.netlify.app/) 
