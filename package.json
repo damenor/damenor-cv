@@ -4,8 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "deploy": "ng build --base-href=https://damenor.github.io/damenor-cv/",
     "build": "ng build",
+    "build:netlify": "ng build --output-path=dist/",
+    "build:gitpages": "ng build --base-href=/damenor-cv/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
