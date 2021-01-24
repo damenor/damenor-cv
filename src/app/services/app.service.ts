@@ -20,7 +20,7 @@ export class AppService {
     private http: HttpClient
   ) {}
 
-  Init = () => new Promise<void>((resolve, reject) => setTimeout(() => resolve(), 500));
+  Init = () => new Promise<void>((resolve, reject) => setTimeout(() => resolve(), 0));
 
   downloadCV = () => {
     this.http.get('/assets/downloads/cv.txt', { responseType: 'blob' })
