@@ -7,17 +7,26 @@
   background-size: cover;
   background-position: center;
   background-image: url(../assets/img/bg.jpg);
-  &:before {
+
+  $heightBack: 1rem;
+  &:before,
+  &:after {
     $width: 95%;
-    $height: 1rem;
     z-index: -1;
     position: absolute;
     content: '';
     width: $width;
-    height: $height;
-    top: -$height;
+    height: $heightBack;
+    top: -$heightBack;
     left: calc((100% - #{$width}) / 2);
-    background-color: rgba($color-bg-dark-light, 1);
+    background-color: $color-bg-dark-light;
+    border-bottom: 1px solid rgba($color-bg-dark , 0.7);
+  }
+  &:after {
+    $width: 90%;
+    width: 90%;
+    top: -#{$heightBack * 2};
+    left: calc((100% - #{$width}) / 2);
   }
   &__content {
     width: 100%;
@@ -44,11 +53,10 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 3rem 1rem;
   display: grid;
   grid-template-columns: 100%;
   @include mediaQueryDesktop {
-    padding: 4rem 0;
     grid-template-columns: 300px auto 300px;
     column-gap: 0.5rem;
 
