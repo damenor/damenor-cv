@@ -8,7 +8,6 @@ import {
   QueryList, 
   TemplateRef, 
   ViewChild, 
-  ViewChildren 
 } from '@angular/core';
 import { 
   animate, 
@@ -24,11 +23,6 @@ import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons
 export class CarouselItemDirective {
   constructor(public tpl: TemplateRef<any>) { }
 }
-
-@Directive({
-  selector: '.carousel__content-item'
-})
-export class CarouselItemElement {}
 
 @Component({
   selector: 'app-carousel',

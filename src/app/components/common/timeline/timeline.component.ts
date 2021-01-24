@@ -9,9 +9,7 @@ export class TimelineComponent implements OnInit {
 
   @Input() items;
 
-  ngOnInit() {
-    console.log(this.items)
-  }
+  ngOnInit() {}
 
   isLeft = i => i%2 === 0;
 

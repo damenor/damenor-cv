@@ -21,6 +21,8 @@ import { ExperienceComponent } from './experience/experience.component';
 import { SocialsComponent } from './socials/socials.component';
 import { BtnDownloadCvComponent } from './btn-download-cv/btn-download-cv.component';
 
+import { ScrollAnimationDirective } from '../directives/scroll-animation.directive';
+
 const exportComponents = [
   BtnDownloadCvComponent,
   CarouselComponent,
@@ -46,6 +48,7 @@ const internalComponents = [
   declarations: [
     ...exportComponents,
     ...internalComponents,
+    ScrollAnimationDirective
   ],
   exports: [
     ...exportComponents,

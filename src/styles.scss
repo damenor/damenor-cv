@@ -24,3 +24,7 @@ button {
   background-color: inherit;
   border: none;
 }
+
+.card {
+  @include card;
+}
