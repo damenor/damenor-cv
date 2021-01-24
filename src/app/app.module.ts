@@ -22,13 +22,13 @@ export function initializeApp1 (appService: AppService) {
     ComponentsModule
   ],
   providers: [
-    AppService,
-    {
-      provide: APP_INITIALIZER, 
-      useFactory: initializeApp1, 
-      deps: [AppService],
-      multi: true
-    }
+    // AppService,
+    // {
+    //   provide: APP_INITIALIZER, 
+    //   useFactory: initializeApp1, 
+    //   deps: [AppService],
+    //   multi: true
+    // }
   ],
   bootstrap: [AppComponent]
 })
