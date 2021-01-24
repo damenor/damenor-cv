@@ -26,5 +26,5 @@ button {
 }
 
 .card {
-  @include card;
+  @include card($padding: 0);
 }

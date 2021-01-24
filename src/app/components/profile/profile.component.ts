@@ -1,6 +1,9 @@
+import { AnimationMetadata } from '@angular/animations';
 import { Component } from '@angular/core';
 
-import { AppService } from 'src/app/services/app.service';
+import { fallInEnter, scaleInEnter } from '../../animations';
+
+import { AppService } from '../../services/app.service';
 
 @Component({
   selector: 'app-profile',
@@ -8,6 +11,8 @@ import { AppService } from 'src/app/services/app.service';
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent {
+
+  animation: AnimationMetadata[] = fallInEnter;
 
   constructor(
     public appService: AppService

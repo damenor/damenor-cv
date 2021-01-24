@@ -1,20 +1,26 @@
+import { AnimationMetadata } from '@angular/animations'
 import { Component, OnInit } from '@angular/core';
-import { AppService } from 'src/app/services/app.service';
+
+import { fallInEnter } from '../../animations';
+import { AppService } from '../../services/app.service';
 
 @Component({
   selector: 'app-experience-others',
   template: `
-    <app-card [title]="options.title">
-      <app-timeline [items]="options.items"></app-timeline>
-    </app-card>
-    
+    <div [scrollAnimation]="animation">
+      <app-card [title]="options.title">
+        <app-timeline [items]="options.items"></app-timeline>
+      </app-card>
+    </div>
   `,
   styles: [
   ]
 })
 export class ExperienceOthersComponent implements OnInit {
 
-  options: { title: string, items: any[] }
+  options: { title: string, items: any[] };
+
+  animation: AnimationMetadata[] = fallInEnter;
 
   constructor(
     private appService: AppService

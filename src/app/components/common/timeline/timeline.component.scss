@@ -8,7 +8,7 @@
   &__item {
     $widthSeparator: 2px;
     position: relative;
-    padding: 0 1rem;
+    padding-left: 1rem;
     text-align: left;
     &:last-child {
       border-bottom: none;
@@ -38,6 +38,7 @@
       background-color: $color-secondary;
     }
     @include mediaQueryDesktop {
+      padding: 0 1rem;
       &:before,
       &:after {
         top: 0.25rem;
@@ -70,7 +71,7 @@
     }
 
     &-data {
-      @include flex($x: flex-start, $y: center);
+      @include flex($x: flex-start, $y: center, $isWrap: false);
       font-size: $font-size-xxs;
       &-date {
         padding: 0.25rem 0.75rem;

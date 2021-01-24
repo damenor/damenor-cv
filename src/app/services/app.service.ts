@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { ISocial } from '../interfaces/social.interface';
 
-import { HOBBIES, SOCIALS, SKILLS, EXPERIENCIES } from '../constants';
+import { HOBBIES, SOCIALS, SKILLS, EXPERIENCIES } from '../constants/data';
 
 @Injectable({
   providedIn: 'root'

@@ -1,7 +1,8 @@
-import { animate, AnimationMetadata, style } from '@angular/animations'
+import { animate, AnimationMetadata, style } from '@angular/animations';
 import { Component } from '@angular/core';
 
 import { AppService } from '../../services/app.service';
+import { scaleInEnter } from '../../animations';
 
 @Component({
   selector: 'app-hobbies',
@@ -16,13 +17,7 @@ import { AppService } from '../../services/app.service';
 })
 export class HobbiesComponent {
 
-  animation: AnimationMetadata[] = [
-    style({  opacity: 0, transform: 'scale(0)' }),
-    animate('700ms ease-in-out', style({
-      opacity: 1,
-      transform: 'scale(1)'
-    })),
-  ]
+  animation: AnimationMetadata[] = scaleInEnter;
 
   constructor(
     public appService: AppService

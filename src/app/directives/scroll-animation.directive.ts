@@ -12,16 +12,17 @@ export enum EScrollAnimation {
 export class ScrollAnimationDirective implements OnInit, OnDestroy {
 
   animationPlayer: AnimationPlayer;
-  state = EScrollAnimation.normal;
+  state = EScrollAnimation.scrolled;
+  componentPosition: number;
+  offset = 0.90;
 
-  @Input('scrollAnimation') animation: AnimationMetadata[]
+  @Input('scrollAnimation') animation: AnimationMetadata[];
 
   @HostListener('window:scroll', ['$event'])
     checkScroll() {
-      const componentPosition = this.el.nativeElement.offsetTop - window.innerHeight * 0.9;
       const scrollPosition = window.pageYOffset;
 
-      if (scrollPosition >= componentPosition && this.state !== EScrollAnimation.scrolled) {
+      if (scrollPosition >= this.componentPosition && this.state !== EScrollAnimation.scrolled) {
         this.state = EScrollAnimation.scrolled;
         this.animationPlayer?.play();
       } 
@@ -34,6 +35,7 @@ export class ScrollAnimationDirective implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit() {
+    this.componentPosition = this.el.nativeElement.offsetTop - this.getOffset();
     this.createAnimation();
   }
   
@@ -42,11 +44,14 @@ export class ScrollAnimationDirective implements OnInit, OnDestroy {
   }
   
   private createAnimation = () => {    
-    if(this.animation) {
+    if(this.animation && this.componentPosition > (window.innerHeight / 2)) {
+      this.state = EScrollAnimation.normal;
       const factory = this.animationBuilder.build(this.animation);
       this.animationPlayer = factory.create(this.el.nativeElement);
       this.animationPlayer.pause();
     }
   }
+
+  private getOffset = () => window.innerHeight * this.offset
 
 }

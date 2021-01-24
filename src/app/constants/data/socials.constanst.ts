@@ -1,7 +1,7 @@
 import { faGithub, faLinkedin, faNpm, faGooglePlay } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
-import { ISocial } from '../interfaces/social.interface'; 
+import { ISocial } from '../../interfaces/social.interface'; 
 
 export const SOCIALS: ISocial[] = [
   { icon: faLinkedin, href: 'www.linkedin.com/in/damenor' },
