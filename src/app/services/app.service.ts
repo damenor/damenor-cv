@@ -23,7 +23,7 @@ export class AppService {
   Init = () => new Promise<void>((resolve, reject) => setTimeout(() => resolve(), 0));
 
   downloadCV = () => {
-    this.http.get('/assets/downloads/cv.txt', { responseType: 'blob' })
+    this.http.get('/assets/downloads/cv_david_menor.pdf', { responseType: 'blob' })
       .subscribe(blob => {
         const a = document.createElement('a');
         const objctUrl = URL.createObjectURL(blob);
